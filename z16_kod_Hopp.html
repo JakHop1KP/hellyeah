@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Hoppe Z16_KOD</title>
+</head>
+<body>
+    <textarea cols="295" rows="43" readonly>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Hoppe Z16</title>
+</head>
+<body style="margin:0;">
+    <div style="color:navy;">
+        <script language="JavaScript">
+// Jakub Hoppe 2KP
+// Zadanie 16
+            var liczba1=prompt("Podaj pierwszą liczbę A=","");
+            var liczba2=prompt("Podaj drugą liczbę B=","");
+            var A_hop=parseFloat(liczba1);
+            var B_hop=parseFloat(liczba2);
+            var w1_hop=A_hop*A_hop*A_hop;
+            var w2_hop=3*A_hop*A_hop*B_hop;
+            var w3_hop=3*A_hop*B_hop*B_hop;
+            var w4_hop=B_hop*B_hop*B_hop;
+            var wynik_hop=w1_hop+w2_hop+w3_hop+w4_hop;
+            document.write("<div style=\"font-size:30px;\">wczytane liczby: A="+A_hop+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B="+B_hop+"</div>");
+            document.write("<span id=\"linia2_hop\" style=\"white-space:nowrap;font-size:20px;\">("+A_hop+" + "+B_hop+")^3= "+A_hop+"^3 + 3*(("+A_hop+")^2)*("+B_hop+") + 3*("+A_hop+")*(("+B_hop+")^2) + "+B_hop+"^3 = "+w1_hop+" + "+w2_hop+" + "+w3_hop+" + "+w4_hop+" = "+wynik_hop+"</span>");
+            function dopasuj_hoppe()
+            {
+                var linia=document.getElementById("linia2_hop");
+                linia.style.fontSize="20px";
+                var rozmiar=20*(document.body.clientWidth-4)/linia.offsetWidth;
+                linia.style.fontSize=rozmiar+"px";
+            }
+            dopasuj_hoppe();
+            window.onresize=dopasuj_hoppe;
+            function okno_zamknij_hoppe()
+            {
+                window.close()
+            }
+        </script>
+    </div>
+    <br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_hoppe()"/>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
